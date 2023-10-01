@@ -6,6 +6,8 @@ import { ProductsComponent } from './pages/products-general/products/products.co
 import { ConcentrationComponent } from './pages/products-general/concentration/concentration.component';
 import { PresentationComponent } from './pages/products-general/presentation/presentation.component';
 import { WarehouseComponent } from './pages/products-general/warehouse/warehouse.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AjustesComponent } from './pages/settins-general/ajustes/ajustes.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/sidebar' },
@@ -21,6 +23,9 @@ const routes: Routes = [
       { path: 'concentration', component: ConcentrationComponent },
       { path: 'presentation', component: PresentationComponent },
       { path: 'warehouse', component: WarehouseComponent },
+      { path: 'dashboard', component: DashboardComponent},
+      { path: 'ajustes', component: AjustesComponent},
+
     ],
   },
 ]
