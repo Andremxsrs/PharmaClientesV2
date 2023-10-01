@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importar los estilos de Ng-Zorro-Antd */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '~ng-zorro-antd/ng-zorro-antd.min.css';
+
+
