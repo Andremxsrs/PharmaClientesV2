@@ -31,7 +31,9 @@ import { LoginComponent } from './services/login/login.component';
 import { RegisterComponent } from './services/register/register.component';
 import { LoginErrorAuthComponent } from './shared/modals/login/login-error-auth/login-error-auth.component';
 import { LoginSuccesfulAuthComponent } from './shared/modals/login/login-succesful-auth/login-succesful-auth.component';
-import { AjustesComponent } from './pages/settins-general/ajustes/ajustes.component';
+import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
+import { NuevousuarioComponent } from './pages/settings-general/nuevousuario/nuevousuario.component';
+import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
 
 registerLocaleData(es);
 
@@ -58,7 +60,10 @@ const routes: Routes = [
     RegisterComponent,
     LoginErrorAuthComponent,
     LoginSuccesfulAuthComponent,
+    UsuariossComponent,
+    NuevousuarioComponent,
     AjustesComponent,
+    
   ],
   imports: [
     BrowserModule,

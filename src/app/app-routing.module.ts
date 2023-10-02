@@ -7,7 +7,8 @@ import { ConcentrationComponent } from './pages/products-general/concentration/c
 import { PresentationComponent } from './pages/products-general/presentation/presentation.component';
 import { WarehouseComponent } from './pages/products-general/warehouse/warehouse.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AjustesComponent } from './pages/settins-general/ajustes/ajustes.component';
+import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
+import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/sidebar' },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'warehouse', component: WarehouseComponent },
       { path: 'dashboard', component: DashboardComponent},
       { path: 'ajustes', component: AjustesComponent},
+      { path: 'usuarios', component: UsuariossComponent},
 
     ],
   },
