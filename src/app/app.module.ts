@@ -15,6 +15,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginClientsComponent } from './pages/login-clients/login-clients.component';
@@ -27,13 +28,13 @@ import { WarehouseComponent } from './pages/products-general/warehouse/warehouse
 import { PurchaseComponent } from './pages/transactions-general/purchase/purchase.component';
 import { SalesComponent } from './pages/transactions-general/sales/sales.component';
 import { TransferComponent } from './pages/transactions-general/transfer/transfer.component';
-import { LoginComponent } from './services/login/login.component';
-import { RegisterComponent } from './services/register/register.component';
 import { LoginErrorAuthComponent } from './shared/modals/login/login-error-auth/login-error-auth.component';
 import { LoginSuccesfulAuthComponent } from './shared/modals/login/login-succesful-auth/login-succesful-auth.component';
 import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
 import { NuevousuarioComponent } from './pages/settings-general/nuevousuario/nuevousuario.component';
 import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
+import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(es);
 
@@ -56,13 +57,13 @@ const routes: Routes = [
     PurchaseComponent,
     SalesComponent,
     TransferComponent,
-    LoginComponent,
-    RegisterComponent,
     LoginErrorAuthComponent,
     LoginSuccesfulAuthComponent,
     UsuariossComponent,
     NuevousuarioComponent,
     AjustesComponent,
+    NewusercreateComponent,
+    
     
   ],
   imports: [
@@ -75,7 +76,9 @@ const routes: Routes = [
     NzBreadCrumbModule,
     NzIconModule,
     NzButtonModule,
-    NzStepsModule
+    NzStepsModule,
+    NgbModule,
+    ScrollingModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }

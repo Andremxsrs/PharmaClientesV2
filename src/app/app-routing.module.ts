@@ -9,17 +9,20 @@ import { WarehouseComponent } from './pages/products-general/warehouse/warehouse
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
 import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
+import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
+import { ChangeUserPasswordComponent } from './shared/change-user-password/change-user-password.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/sidebar' },
-  { path: 'sidebar', component: PruebaSidebarComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
+  { path: 'login', component: LoginClientsComponent },
 
   
   {
     path: 'sidebar',
     component: PruebaSidebarComponent, // Usa el mismo componente principal para mantener el sidebar
     children: [
-      { path: 'login', component: LoginClientsComponent },
+      { path: '', pathMatch: 'full', redirectTo: 'sidebar' },    
+      { path: 'dashboard', component: DashboardComponent },   
       { path: 'products', component: ProductsComponent },
       { path: 'concentration', component: ConcentrationComponent },
       { path: 'presentation', component: PresentationComponent },
@@ -27,7 +30,9 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent},
       { path: 'ajustes', component: AjustesComponent},
       { path: 'usuarios', component: UsuariossComponent},
-
+      { path: 'newuser', component: NewusercreateComponent},
+      { path: 'cambiar', component: ChangeUserPasswordComponent},
+      
     ],
   },
 ]
