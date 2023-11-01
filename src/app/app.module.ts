@@ -35,6 +35,8 @@ import { NuevousuarioComponent } from './pages/settings-general/nuevousuario/nue
 import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
 import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { BillsComponent } from './pages/bills/bills.component';
 
 registerLocaleData(es);
 
@@ -63,6 +65,7 @@ const routes: Routes = [
     NuevousuarioComponent,
     AjustesComponent,
     NewusercreateComponent,
+    BillsComponent,
     
     
   ],
@@ -79,6 +82,7 @@ const routes: Routes = [
     NzStepsModule,
     NgbModule,
     ScrollingModule,
+    NgApexchartsModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }

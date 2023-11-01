@@ -15,7 +15,7 @@ export class UsuariossComponent {
   ) { }
 
   openModal() {
-    const modal  = this.modalService.open(NewusercreateComponent, { size: 'width:1250px;' });
+    const modal  = this.modalService.open(NewusercreateComponent, { size: '800px' });
     modal.componentInstance.modalClass = "create-user";
     this.errorMessage = null;
   }

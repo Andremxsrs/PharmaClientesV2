@@ -11,6 +11,7 @@ import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.compo
 import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
 import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
 import { ChangeUserPasswordComponent } from './shared/change-user-password/change-user-password.component';
+import { BillsComponent } from './pages/bills/bills.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -21,7 +22,7 @@ const routes: Routes = [
     path: 'sidebar',
     component: PruebaSidebarComponent, // Usa el mismo componente principal para mantener el sidebar
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'sidebar' },    
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },    
       { path: 'dashboard', component: DashboardComponent },   
       { path: 'products', component: ProductsComponent },
       { path: 'concentration', component: ConcentrationComponent },
@@ -31,8 +32,8 @@ const routes: Routes = [
       { path: 'ajustes', component: AjustesComponent},
       { path: 'usuarios', component: UsuariossComponent},
       { path: 'newuser', component: NewusercreateComponent},
-      { path: 'cambiar', component: ChangeUserPasswordComponent},
-      
+      { path: 'cambiar', component: ChangeUserPasswordComponent}, 
+      { path: 'factura', component: BillsComponent},
     ],
   },
 ]
