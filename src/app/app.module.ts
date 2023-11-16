@@ -17,26 +17,13 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginClientsComponent } from './pages/login-clients/login-clients.component';
-import { RegisterClientsComponent } from './pages/register-clients/register-clients.component';
-import { ChangeUserPasswordComponent } from './shared/change-user-password/change-user-password.component';
-import { ConcentrationComponent } from './pages/products-general/concentration/concentration.component';
-import { PresentationComponent } from './pages/products-general/presentation/presentation.component';
-import { ProductsComponent } from './pages/products-general/products/products.component';
-import { WarehouseComponent } from './pages/products-general/warehouse/warehouse.component';
-import { PurchaseComponent } from './pages/transactions-general/purchase/purchase.component';
-import { SalesComponent } from './pages/transactions-general/sales/sales.component';
-import { TransferComponent } from './pages/transactions-general/transfer/transfer.component';
+import { RegisterClientsComponent } from './pages/dashboard/register-clients/register-clients.component';
 import { LoginErrorAuthComponent } from './shared/modals/login/login-error-auth/login-error-auth.component';
 import { LoginSuccesfulAuthComponent } from './shared/modals/login/login-succesful-auth/login-succesful-auth.component';
-import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
-import { NuevousuarioComponent } from './pages/settings-general/nuevousuario/nuevousuario.component';
-import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
-import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { BillsComponent } from './pages/bills/bills.component';
+import { Page404Component } from './shared/page404/page404.component';
+import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
 
 registerLocaleData(es);
 
@@ -48,24 +35,11 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     PruebaSidebarComponent,
-    DashboardComponent,
-    LoginClientsComponent,
     RegisterClientsComponent,
-    ChangeUserPasswordComponent,
-    ConcentrationComponent,
-    PresentationComponent,
-    ProductsComponent,
-    WarehouseComponent,
-    PurchaseComponent,
-    SalesComponent,
-    TransferComponent,
     LoginErrorAuthComponent,
     LoginSuccesfulAuthComponent,
-    UsuariossComponent,
-    NuevousuarioComponent,
-    AjustesComponent,
-    NewusercreateComponent,
-    BillsComponent,
+    Page404Component,
+    MantenimientoComponent,
     
     
   ],

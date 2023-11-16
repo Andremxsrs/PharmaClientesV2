@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import ApexCharts from 'apexcharts';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

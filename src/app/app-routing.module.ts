@@ -1,42 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PruebaSidebarComponent } from './shared/prueba-sidebar/prueba-sidebar.component';
-import { LoginClientsComponent } from './pages/login-clients/login-clients.component';
-import { ProductsComponent } from './pages/products-general/products/products.component';
-import { ConcentrationComponent } from './pages/products-general/concentration/concentration.component';
-import { PresentationComponent } from './pages/products-general/presentation/presentation.component';
-import { WarehouseComponent } from './pages/products-general/warehouse/warehouse.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { AjustesComponent } from './pages/settings-general/ajustes/ajustes.component';
-import { UsuariossComponent } from './pages/settings-general/usuarios/usuarioss.component';
-import { NewusercreateComponent } from './shared/modals/newusercreate/newusercreate.component';
-import { ChangeUserPasswordComponent } from './shared/change-user-password/change-user-password.component';
-import { BillsComponent } from './pages/bills/bills.component';
+import { Page404Component } from './shared/page404/page404.component';
+import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
-  { path: 'login', component: LoginClientsComponent },
-
-  
+  { path: 'login', loadChildren: () => import('./pages/dashboard/login-clients/login-clients.module').then(m => m.LoginClientsModule) },
   {
     path: 'sidebar',
-    component: PruebaSidebarComponent, // Usa el mismo componente principal para mantener el sidebar
+    component: PruebaSidebarComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },    
-      { path: 'dashboard', component: DashboardComponent },   
-      { path: 'products', component: ProductsComponent },
-      { path: 'concentration', component: ConcentrationComponent },
-      { path: 'presentation', component: PresentationComponent },
-      { path: 'warehouse', component: WarehouseComponent },
-      { path: 'dashboard', component: DashboardComponent},
-      { path: 'ajustes', component: AjustesComponent},
-      { path: 'usuarios', component: UsuariossComponent},
-      { path: 'newuser', component: NewusercreateComponent},
-      { path: 'cambiar', component: ChangeUserPasswordComponent}, 
-      { path: 'factura', component: BillsComponent},
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
+      { path: 'factura', loadChildren: () => import('./pages/dashboard/bills/bills.module').then(m => m.BillsModule) },
+      { path: 'products', loadChildren: () => import('./pages/dashboard/products-general/products/products.module').then(m => m.ProductsModule) },
+      { path: 'concentration', loadChildren: () => import('./pages/dashboard/products-general/concentration/concentration.module').then(m => m.ConcentrationModule) },
+      { path: 'presentation', loadChildren: () => import('./pages/dashboard/products-general/presentation/presentation.module').then(m => m.PresentationModule) },
+      { path: 'warehouse', loadChildren: () => import('./pages/dashboard/products-general/warehouse/warehouse.module').then(m => m.WarehouseModule) },
+      { path: 'bills', loadChildren: () => import('./pages/dashboard/bills/bills.module').then(m => m.BillsModule) },
+      { path: 'ajustes', loadChildren: () => import('./pages/dashboard/settings-general/ajustes/ajustes.module').then(m => m.AjustesModule) },
+      { path: 'usuarios', loadChildren: () => import('./pages/dashboard/settings-general/usuarios/usuarios.module').then(m => m.UsuariosModule) },
+      /* { path: 'newuser', loadChildren: () => import('./shared/modals/newusercreate/newusercreate.module').then(m => m.NewUserCreateModule) }, */
+      { path: 'cambiar', loadChildren: () => import('./shared/change-user-password/change-user-password.module').then(m => m.ChangeUserPasswordModule) },
+      { path: 'purchase', loadChildren: () => import('./pages/dashboard/transactions-general/purchase/purchase.module').then(m => m.PurchaseModule) },
+      { path: 'sales', loadChildren: () => import('./pages/dashboard/transactions-general/sales/sales.module').then(m => m.SalesModule) },
+      { path: 'transfer', loadChildren: () => import('./pages/dashboard/transactions-general/transfer/transfer.module').then(m => m.TransferModule) },
+      // ... más rutas hijas para 'sidebar' si es necesario
     ],
-  },
-]
+  },
+  { path: '**', component: Page404Component },
+  { path: '**', component: MantenimientoComponent },
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
