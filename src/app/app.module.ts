@@ -26,12 +26,12 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
 import { TablePrimeNGComponent } from './pruebas/table-prime-ng/table-prime-ng.component';
-
 registerLocaleData(es);
 
 const routes: Routes = [
   {path: '', redirectTo: '/sidebar', pathMatch: 'full'},
   {path: 'sidebar', component: PruebaSidebarComponent},
+  
 ]
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ const routes: Routes = [
     LoginSuccesfulAuthComponent,
     Page404Component,
     MantenimientoComponent,
-    TablePrimeNGComponent,
+    TablePrimeNGComponent
   ],
   imports: [
     BrowserModule,

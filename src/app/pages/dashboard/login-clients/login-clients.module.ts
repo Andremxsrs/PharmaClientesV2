@@ -3,6 +3,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms'; /* Importación nueva */
+
 
 import { LoginClientsComponent } from './login-clients.component'; // Asegúrate de que la importación sea correcta
 
@@ -12,6 +14,7 @@ import { LoginClientsComponent } from './login-clients.component'; // Asegúrate
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild([ // Configura las rutas específicas para este módulo
       { path: '', component: LoginClientsComponent }, // Ruta raíz del módulo
       // Otras rutas específicas de este módulo si las tienes
