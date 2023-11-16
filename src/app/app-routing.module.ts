@@ -14,13 +14,13 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
       { path: 'factura', loadChildren: () => import('./pages/dashboard/bills/bills.module').then(m => m.BillsModule) },
+      { path: 'thirds', loadChildren: () => import('./pages/dashboard/thirds/thirds.module').then(m => m.ThirdsModule) },
       { path: 'products', loadChildren: () => import('./pages/dashboard/products-general/products/products.module').then(m => m.ProductsModule) },
       { path: 'concentration', loadChildren: () => import('./pages/dashboard/products-general/concentration/concentration.module').then(m => m.ConcentrationModule) },
       { path: 'presentation', loadChildren: () => import('./pages/dashboard/products-general/presentation/presentation.module').then(m => m.PresentationModule) },
       { path: 'warehouse', loadChildren: () => import('./pages/dashboard/products-general/warehouse/warehouse.module').then(m => m.WarehouseModule) },
-      { path: 'bills', loadChildren: () => import('./pages/dashboard/bills/bills.module').then(m => m.BillsModule) },
       { path: 'ajustes', loadChildren: () => import('./pages/dashboard/settings-general/ajustes/ajustes.module').then(m => m.AjustesModule) },
-      { path: 'usuarios', loadChildren: () => import('./pages/dashboard/settings-general/usuarios/usuarios.module').then(m => m.UsuariosModule) },
+      /* { path: 'usuarios', loadChildren: () => import('./pages/dashboard/settings-general/usuarios/usuarios.module').then(m => m.UsuariosModule) }, */
       /* { path: 'newuser', loadChildren: () => import('./shared/modals/newusercreate/newusercreate.module').then(m => m.NewUserCreateModule) }, */
       { path: 'cambiar', loadChildren: () => import('./shared/change-user-password/change-user-password.module').then(m => m.ChangeUserPasswordModule) },
       { path: 'purchase', loadChildren: () => import('./pages/dashboard/transactions-general/purchase/purchase.module').then(m => m.PurchaseModule) },

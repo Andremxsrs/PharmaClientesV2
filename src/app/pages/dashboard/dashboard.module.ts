@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import {DashboardComponent} from './dashboard.component'; // Asegúrate de que la importación sea correcta
+import {DashboardComponent} from './dashboard.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent, // Agrega el componente al módulo
+    DashboardComponent,
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from 'primeng/button';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +11,6 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PruebaSidebarComponent } from './shared/prueba-sidebar/prueba-sidebar.component';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
+import { TablePrimeNGComponent } from './pruebas/table-prime-ng/table-prime-ng.component';
 
 registerLocaleData(es);
 
@@ -40,8 +42,7 @@ const routes: Routes = [
     LoginSuccesfulAuthComponent,
     Page404Component,
     MantenimientoComponent,
-    
-    
+    TablePrimeNGComponent,
   ],
   imports: [
     BrowserModule,
