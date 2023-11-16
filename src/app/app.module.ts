@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule } from 'primeng/button'; /* PrimeNG - Importación de Ejemplo */
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +58,7 @@ const routes: Routes = [
     NgbModule,
     ScrollingModule,
     NgApexchartsModule,
+    ButtonModule, /* PrimeNG - Import Example */
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }
