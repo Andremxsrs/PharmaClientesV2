@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
+import { ButtonModule } from 'primeng/button'; /* PrimeNG - Importación de Ejemplo */
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
-import { TablePrimeNGComponent } from './pruebas/table-prime-ng/table-prime-ng.component';
 
 registerLocaleData(es);
 
@@ -42,7 +41,6 @@ const routes: Routes = [
     LoginSuccesfulAuthComponent,
     Page404Component,
     MantenimientoComponent,
-    TablePrimeNGComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +56,7 @@ const routes: Routes = [
     NgbModule,
     ScrollingModule,
     NgApexchartsModule,
+    ButtonModule, /* PrimeNG - Import Example */
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }
