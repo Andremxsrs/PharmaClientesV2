@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -167,5 +168,4 @@ export class LoginClientsComponent {
 
   toggleSelect() {
     this.isSelectActive = !this.isSelectActive;
-  }
-}
+  } }

@@ -25,7 +25,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
-import { TablePrimeNGComponent } from './pruebas/table-prime-ng/table-prime-ng.component';
 registerLocaleData(es);
 
 const routes: Routes = [
@@ -42,7 +41,6 @@ const routes: Routes = [
     LoginSuccesfulAuthComponent,
     Page404Component,
     MantenimientoComponent,
-    TablePrimeNGComponent
   ],
   imports: [
     BrowserModule,

@@ -26,7 +26,6 @@ const routes: Routes = [
       { path: 'purchase', loadChildren: () => import('./pages/dashboard/transactions-general/purchase/purchase.module').then(m => m.PurchaseModule) },
       { path: 'sales', loadChildren: () => import('./pages/dashboard/transactions-general/sales/sales.module').then(m => m.SalesModule) },
       { path: 'transfer', loadChildren: () => import('./pages/dashboard/transactions-general/transfer/transfer.module').then(m => m.TransferModule) },
-      { path: 'pruebastabla', loadChildren: () => import('./pruebas/table-prime-ng/table-prime-ng.module').then(m => m.TablePrimeNGModule) },
       // ... más rutas hijas para 'sidebar' si es necesario
     ],
   },
