@@ -20,7 +20,7 @@ const routes: Routes = [
       { path: 'presentation', loadChildren: () => import('./pages/dashboard/products-general/presentation/presentation.module').then(m => m.PresentationModule) },
       { path: 'warehouse', loadChildren: () => import('./pages/dashboard/products-general/warehouse/warehouse.module').then(m => m.WarehouseModule) },
       { path: 'ajustes', loadChildren: () => import('./pages/dashboard/settings-general/ajustes/ajustes.module').then(m => m.AjustesModule) },
-      /* { path: 'usuarios', loadChildren: () => import('./pages/dashboard/settings-general/usuarios/usuarios.module').then(m => m.UsuariosModule) }, */
+      { path: 'usuarios', loadChildren: () => import('./pages/dashboard/settings-general/usuarios/usuarioss.module').then(m => m.UsuariossModule) },
       /* { path: 'newuser', loadChildren: () => import('./shared/modals/newusercreate/newusercreate.module').then(m => m.NewUserCreateModule) }, */
       { path: 'cambiar', loadChildren: () => import('./shared/change-user-password/change-user-password.module').then(m => m.ChangeUserPasswordModule) },
       { path: 'purchase', loadChildren: () => import('./pages/dashboard/transactions-general/purchase/purchase.module').then(m => m.PurchaseModule) },
