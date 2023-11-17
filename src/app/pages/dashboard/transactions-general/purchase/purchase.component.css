@@ -1,0 +1,32 @@
+/* CSS para pantallas pequeñas: secciones apiladas */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* CSS para pantallas medianas y grandes: secciones en dos columnas */
+@media (min-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.demo-table {
+    width: 100%;
+  }
+  
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+  
+  

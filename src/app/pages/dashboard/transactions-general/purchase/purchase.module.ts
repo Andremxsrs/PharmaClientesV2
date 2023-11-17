@@ -5,7 +5,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { MatTableModule } from '@angular/material/table';
 import { PurchaseComponent } from './purchase.component'; // Asegúrate de que la importación sea correcta
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { PurchaseComponent } from './purchase.component'; // Asegúrate de que l
   imports: [
     CommonModule,
     NzStepsModule,
-    NzIconModule,
+    NzIconModule, 
+    MatTableModule,
     RouterModule.forChild([ // Configura las rutas específicas para este módulo
       { path: '', component: PurchaseComponent }, // Ruta raíz del módulo
       // Otras rutas específicas de este módulo si las tienes

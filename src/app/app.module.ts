@@ -25,6 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
+import { MatTableModule } from '@angular/material/table';
+
 registerLocaleData(es);
 
 const routes: Routes = [
@@ -56,6 +58,7 @@ const routes: Routes = [
     NgbModule,
     ScrollingModule,
     NgApexchartsModule,
+    MatTableModule,
     ButtonModule, /* PrimeNG - Import Example */
   ],
   providers: [
