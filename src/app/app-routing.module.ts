@@ -3,15 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { PruebaSidebarComponent } from './shared/prueba-sidebar/prueba-sidebar.component';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
+import { LoginClientsComponent } from './pages/dashboard/login-clients/login-clients.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
-  { path: 'login', loadChildren: () => import('./pages/dashboard/login-clients/login-clients.module').then(m => m.LoginClientsModule) },
+  { path: 'home', loadChildren: () => import('./pages/dashboard/home-pharma/home-pharma.module').then(m => m.HomePharmaModule) },
   {
     path: 'sidebar',
     component: PruebaSidebarComponent,
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      /* { path: 'login', loadChildren: () => import('./pages/dashboard/login-clients/login-clients.module').then(m => m.LoginClientsModule) }, */
       { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
       { path: 'factura', loadChildren: () => import('./pages/dashboard/bills/bills.module').then(m => m.BillsModule) },
       { path: 'thirds', loadChildren: () => import('./pages/dashboard/thirds/thirds.module').then(m => m.ThirdsModule) },
@@ -29,6 +31,7 @@ const routes: Routes = [
       // ... más rutas hijas para 'sidebar' si es necesario
     ],
   },
+  { path: 'login', component: LoginClientsComponent },
   { path: '**', component: Page404Component },
   { path: '**', component: MantenimientoComponent },
 
