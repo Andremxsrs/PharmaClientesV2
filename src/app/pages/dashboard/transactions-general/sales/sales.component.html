@@ -11,33 +11,37 @@
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6">
                                 <label for="Correo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo Electrónico</label>
-                                <input type="text" name="Correo" id="Correo" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" name="Correo" [(ngModel)] = "vender.Correo" id="Correo" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="IdBodega_Origen" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID Bodega Origen</label>
-                                <input type="text" name="IdBodega_Origen" id="IdBodega_Origen" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" [(ngModel)] = "vender.IdBodega_Origen" name="IdBodega_Origen" id="IdBodega_Origen" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="Producto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Producto</label>
-                                <input type="text" name="Producto" id="Producto" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" name="Producto" [(ngModel)] = "vender.Producto" id="Producto" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="DocSubtotalumentoU" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subtotal</label>
-                                <input type="text" name="Subtotal" id="Subtotal" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" name="Subtotal" [(ngModel)] = "vender.Subtotal" id="Subtotal" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="Iva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">IVA</label>
-                                <input type="text" name="Iva" id="Iva" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" name="Iva" [(ngModel)] = "vender.Iva" id="Iva" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="Total" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total</label>
-                                <input type="text" name="Total" id="Total" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                                <input type="text" name="Total" [(ngModel)] = "vender.Total" id="Total" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                             </div>
                             <div class="col-span-6 sm:col-full flex justify-center">
                                 <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
                                     Vender
+                                </button>
+                                <button type="submit" (click)="agregarVenta()" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-4">
+                                    <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                                    Agregar
                                 </button>
                             </div> 
                         </div>
@@ -84,29 +88,17 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                  burrita@gmail.com
-                              </th>
-                              <td class="px-6 py-4">
-                                  11
-                              </td>
-                              <td class="px-6 py-4">
-                                  Acetaminofén
-                              </td>
-                              <td class="px-6 py-4">
-                                $200.000
-                              </td>
-                              <td class="px-6 py-4">
-                                  %19
-                              </td>
-                              <td class="px-6 py-4">
-                                220.000
-                              </td>
-                              <td class="px-6 py-4 text-right">
-                                  <a (click)="openModal()" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                              </td>
-                          </tr>     
+                        <tr *ngFor="let venta of ventas" class="bg-white border-b ...">
+                          <td class="px-6 py-4">c}</td>
+                          <td class="px-6 py-4">{{ venta.IdBodega_Origen }}</td>
+                          <td class="px-6 py-4">{{ venta.Producto }}</td>
+                          <td class="px-6 py-4">{{ venta.Subtotal }}</td>
+                          <td class="px-6 py-4">{{ venta.Iva }}</td>
+                          <td class="px-6 py-4">{{ venta.Total }}</td>
+                          <td class="px-6 py-4 text-right">
+                            <a (click)="openModal()" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                          </td>
+                        </tr>
                       </tbody>
                   </table>
                 </div>

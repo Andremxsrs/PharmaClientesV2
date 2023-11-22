@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class TransferComponent {
 
+  transferir = {
+    producto: '',
+    bodega: '',
+    BodegaD: '',
+    CantidadT: ''
+  }
+
+  transferencias: any[] = [];
+
+  agregarTransferencia() {
+    this.transferencias.push({ ...this.transferir });
+    this.transferir = { producto: '', bodega: '', BodegaD: '', CantidadT: '' };
+  }
 }
+
+/* Ejemplos de Variables
+
+{{ transferir.producto }}
+{{ transferir.bodega }}
+{{ transferir.BodegaD }}
+{{ transferir.CantidadT }}
+
+*/

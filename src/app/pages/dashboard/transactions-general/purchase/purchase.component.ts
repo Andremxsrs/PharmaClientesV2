@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PurchaseModalComponent } from 'src/app/shared/modals/transactions/purchase-modal/purchase-modal.component';
- 
+import { PurchaseModalComponent } from 'src/app/shared/modals/transactions/purchase-modal/purchase-modal.component';import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,6 +10,24 @@ import { PurchaseModalComponent } from 'src/app/shared/modals/transactions/purch
   styleUrls: ['./purchase.component.css']
 })
 export class PurchaseComponent {
+
+  compra = {
+    CodigoF: '',
+    Cantidad: '',
+    DocumentoP: '',
+    DocumentoU: '',
+    IdBodega_Destino: '',
+    Producto: '',
+    Subtotal: ''
+  };
+
+  compras: any[] = [];
+
+  agregarCompra() {
+    this.compras.push({...this.compra});
+    this.compra = { CodigoF: '', Cantidad: '', DocumentoP: '', DocumentoU: '', IdBodega_Destino: '', Producto: '', Subtotal: '' };
+  }
+
   errorMessage: string  | null = null;
 
   constructor(

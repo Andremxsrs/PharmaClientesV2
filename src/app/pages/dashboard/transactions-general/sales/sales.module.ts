@@ -3,6 +3,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { SalesComponent } from './sales.component'; // Asegúrate de que la importación sea correcta
 
@@ -12,6 +13,7 @@ import { SalesComponent } from './sales.component'; // Asegúrate de que la impo
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([ // Configura las rutas específicas para este módulo
       { path: '', component: SalesComponent }, // Ruta raíz del módulo
       // Otras rutas específicas de este módulo si las tienes

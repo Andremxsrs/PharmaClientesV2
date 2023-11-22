@@ -8,6 +8,23 @@ import { SalesModalComponent } from 'src/app/shared/modals/transactions/sales-mo
   styleUrls: ['./sales.component.css']
 })
 export class SalesComponent {
+
+  vender = { 
+    Correo: '',
+    IdBodega_Origen: '',
+    Producto: '',
+    Subtotal: '',
+    Iva: '',
+    Total: ''
+  };
+
+  ventas: any[] = [];
+
+  agregarVenta() { 
+    this.ventas.push({...this.vender});
+    this.vender = { Correo: '', IdBodega_Origen: '', Producto: '', Subtotal: '', Iva: '', Total: '' };
+  }
+
   errorMessage: string  | null = null;
 
   constructor(
