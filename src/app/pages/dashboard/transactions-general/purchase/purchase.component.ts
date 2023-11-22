@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PurchaseModalComponent } from 'src/app/shared/modals/transactions/purchase-modal/purchase-modal.component';
+ 
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  // ... Tus datos aquí ...
-];
 
 @Component({
   selector: 'app-purchase',
@@ -17,26 +11,24 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./purchase.component.css']
 })
 export class PurchaseComponent {
-  current = 0;
-  inputStep1: string = '';
-  inputStep2: string = '';
-  inputStep3: string = '';
-  inputStep4: string = '';
+  errorMessage: string  | null = null;
 
-  // Agregar las propiedades de la tabla
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-  clickedRows = new Set<PeriodicElement>();
+  constructor(
+    private modalService: NgbModal
+  ) { }
 
-  pre(): void {
-    this.current -= 1;
+  private activeModal: any;
+
+  openModal() {
+    this.activeModal = this.modalService.open(PurchaseModalComponent, { size: '800px' });
+    this.activeModal.componentInstance.modalClass = "edit-product";
+    this.errorMessage = null;
   }
 
-  next(): void {
-    this.current += 1;
-  }
-
-  done(): void {
-    console.log('done');
+  closeModal() {
+    if (this.activeModal) {
+      this.activeModal.close();
+      this.activeModal = null;
+    }
   }
 }

@@ -26,6 +26,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { Page404Component } from './shared/page404/page404.component';
 import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.component';
 import { MatTableModule } from '@angular/material/table';
+import { PurchaseModalComponent } from './shared/modals/transactions/purchase-modal/purchase-modal.component';
+import { SalesModalComponent } from './shared/modals/transactions/sales-modal/sales-modal.component';
 
 registerLocaleData(es);
 
@@ -43,6 +45,8 @@ const routes: Routes = [
     LoginSuccesfulAuthComponent,
     Page404Component,
     MantenimientoComponent,
+    PurchaseModalComponent,
+    SalesModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,7 @@ const routes: Routes = [
     ScrollingModule,
     NgApexchartsModule,
     MatTableModule,
-    ButtonModule, /* PrimeNG - Import Example */
+    ButtonModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }
