@@ -5,39 +5,35 @@
                 <div class="form-step3 flex items-center justify-center">
                     <img src="../../../../assets/icons/almacen.png" alt="">
                     <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white" style="margin-left: 15px;">
-                        Depósito
+                        Bodega
                     </h1>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla?</p>
                 <form [formGroup]="wareHouseForm" class="space-y-4 md:space-y-6" (ngSubmit)="onSubmit()">
                 <div class="form-step2" style="text-align: left;">
                     
-                          <!--<div class="relative z-0 w-full mb-6 group">
-                            <input type="text" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">ID - Warehouse</label>
-                        </div>-->
-                        <div class="relative z-0 w-full mb-6 group">
-                            <input formControlName="nombre" type="text" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name of Warehouse</label>
+                    <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6">
+                            <label for="name-bodega" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de Bodega</label>
+                            <input type="text" name="name-bodega"id="name-bodega" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
                         </div>
 
-                        <div class="relative z-0 w-full mb-6 group">
-                            <input formControlName="direccion" type="text" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                            <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Adress of Warehouse</label>
-                        </div>
-
-                        <div >
-                            <label for="type-user" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Usuario</label>
-                            <select formControlName="rol" id="type-user" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected>Tipo de Usuario</option>
-                            <option value="cliente">Cliente</option>
-                            <option value="admin">Administrador</option>
-                            <option value="user_generente">Gerente de Venta</option>
-                            <option value="user_generente">Gerente de Compra</option>
-                            <option value="user_generente">Analista de Facturación</option>    
+                        <div class="col-span-6">
+                            <label for="direccion-bodega" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirreción de Bodega</label>
+                            <input type="text" name="direccion-bodega"id="direccion-bodega" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required>
+                        </div>  
+                        <div class="col-span-6">
+                            <label for="type-bodega" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Usuario</label>
+                            <select name="type-bodega" id="type-bodega" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                <option value="">Tipo de Usuario</option>
+                                <option value="cliente">Cliente</option>
+                                <option value="admin">Administrador</option>
+                                <option value="user_generente">Gerente de Venta</option>
+                                <option value="user_generente">Gerente de Compra</option>
+                                <option value="user_generente">Analista de Facturación</option> 
                             </select>
                         </div>
-                    
+                    </div>
                 </div>
                 <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Guardar</button>
             </form>

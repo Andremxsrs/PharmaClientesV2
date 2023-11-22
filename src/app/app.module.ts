@@ -28,6 +28,8 @@ import { MantenimientoComponent } from './shared/mantenimiento/mantenimiento.com
 import { MatTableModule } from '@angular/material/table';
 import { PurchaseModalComponent } from './shared/modals/transactions/purchase-modal/purchase-modal.component';
 import { SalesModalComponent } from './shared/modals/transactions/sales-modal/sales-modal.component';
+import { ThirdsModalComponent } from './shared/modals/thirds/thirds-modal/thirds-modal.component';
+import { CreatethirdsComponent } from './shared/modals/thirds/createthirds/createthirds.component';
 
 registerLocaleData(es);
 
@@ -47,6 +49,8 @@ const routes: Routes = [
     MantenimientoComponent,
     PurchaseModalComponent,
     SalesModalComponent,
+    ThirdsModalComponent,
+    CreatethirdsComponent,
   ],
   imports: [
     BrowserModule,
