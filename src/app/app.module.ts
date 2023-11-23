@@ -31,8 +31,6 @@ import { SalesModalComponent } from './shared/modals/transactions/sales-modal/sa
 import { ThirdsModalComponent } from './shared/modals/thirds/thirds-modal/thirds-modal.component';
 import { CreatethirdsComponent } from './shared/modals/thirds/createthirds/createthirds.component';
 
-registerLocaleData(es);
-
 const routes: Routes = [
   {path: '', redirectTo: '/sidebar', pathMatch: 'full'},
   {path: 'sidebar', component: PruebaSidebarComponent},
@@ -68,6 +66,7 @@ const routes: Routes = [
     NgApexchartsModule,
     MatTableModule,
     ButtonModule,
+    
   ],
   providers: [
     { provide: NZ_I18N, useValue: es_ES }

@@ -9,6 +9,7 @@ import { Warehouse } from '../Interface/warehouse';
 export class ProductoServicesService {
   private apiObtenerUser = 'http://localhost:5171/api/usuarios/mostrar/';
   private apiUrl = 'http://localhost:5171/api/bodega/insertar';
+  
 
   constructor(private http: HttpClient) { }
 

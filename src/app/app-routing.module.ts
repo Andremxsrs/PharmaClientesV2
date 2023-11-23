@@ -28,6 +28,7 @@ const routes: Routes = [
       { path: 'purchase', loadChildren: () => import('./pages/dashboard/transactions-general/purchase/purchase.module').then(m => m.PurchaseModule) },
       { path: 'sales', loadChildren: () => import('./pages/dashboard/transactions-general/sales/sales.module').then(m => m.SalesModule) },
       { path: 'transfer', loadChildren: () => import('./pages/dashboard/transactions-general/transfer/transfer.module').then(m => m.TransferModule) },
+      { path: 'newUser', loadChildren: () => import('./shared/modals/newusercreate/newusercreate.module').then(m => m.newUserCreateModule) },
       // ... más rutas hijas para 'sidebar' si es necesario
     ],
   },
